@@ -1,8 +1,7 @@
 function rollDice() {
   var bet = document.getElementById("bet").value;
-  var marker = 1;
+  var marker = 0;
   var count = 0;
-  marker = marker++
   var money = bet;
   var betArray = [bet];
 
@@ -32,10 +31,11 @@ else {
   var newHand = lastHand - 1;
   betArray.push(newHand);
 }
+count = count++
 }
 
 highest = Math.max(...betArray);
-count = betArray.length - betArray.indexOf(highest) -1;
+count = betArray.indexOf(highest);
 if (count < 1){
   count= 1;
 }
