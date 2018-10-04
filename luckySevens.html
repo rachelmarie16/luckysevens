@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Lucky Sevens </title>
+<style>
+
+h1
+{ text-align: center;
+  margin: auto; }
+
+.form-group
+{ text-align: center;
+  margin:auto; }
+
+table
+{ border: 1px solid black;
+  width: 25%;
+  margin: auto; }
+
+caption
+{ font-weight: bold;
+  text-align: left;
+  font-size: 1.1em;
+  text-decoration: underline; }
+
+div
+{ text-align: center;
+  margin: auto; }
+
+td
+{ text-align: left; }
+
+
+</style>
+    </head>
+
+<body>
+<div class="container">
+  <h1> Lucky Sevens </h1> <br/>
+    <form name="game" onsubmit="return rollDice();"  class="form-inline">
+    <div class="form-group">
+        <label for="bet"> Starting Bet: </label>
+        <input type="number" class="form-control" id="bet" placeholder="$0.00" size="2">
+    </div> <br/>
+    <button type="submit" id="submitButton" class="btn btn-default"> Play </button> <br/> <br/>
+</form>
+
+
+<table id="results" class="table table-striped" style="display:none;">
+    <caption> Results </caption>
+    <tbody>
+        <tr>
+            <td> Starting Bet </td>
+            <td> <span id="startingBet"> </span> </td>
+        </tr>
+        <tr>
+            <td> Total Rolls Before Going Broke </td>
+            <td> <span id="totalRolls"> </span> </td>
+        </tr>
+        <tr>
+            <td> Highest Amount Won ($) </td>
+            <td> <span id="highAmount"> </span> </td>
+        </tr>
+        <tr>
+            <td> Roll Count at Highest Amount Won </td>
+            <td> <span id="rollCount"> </span> </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<script type="text/JavaScript" src="luckySevens.js"> </script>
+</body>
+</html>
